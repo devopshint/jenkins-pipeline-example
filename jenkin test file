@@ -1,0 +1,15 @@
+  agent any
+    stages {
+    stage ('First job'){
+        steps {
+            echo "hello team"
+        }
+    }
+    stage ('Second job'){
+        steps {
+            echo "good morning"
+        }
+    
+        }
+    }
+}
