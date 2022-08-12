@@ -3,7 +3,7 @@ pipeline {
     stages {
     stage ('First job'){
         steps {
-            echo "hello jenkin "
+            echo "hello this is future "
         }
     }
     stage ('Second job'){
