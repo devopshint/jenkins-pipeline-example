@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+    stage ('First job'){
+        steps {
+            echo "hello "
+        }
+    }
+    stage ('Second job'){
+        steps {
+            echo "good "
+        }
+    
+        }
+    }
+}
