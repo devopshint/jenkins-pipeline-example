@@ -1,15 +1,21 @@
-  agent any
+pipeline {
+    agent any
+
     stages {
-    stage ('First job'){
-        steps {
-            echo "hello this is india "
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
         }
-    }
-    stage ('Second job'){
-        steps {
-            echo "good morning"
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
         }
-    
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
         }
     }
 }
