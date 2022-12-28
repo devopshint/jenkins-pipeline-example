@@ -1,0 +1,7 @@
+node{
+  stage('SCM Checkout')}
+git 'https://github.com/amritansh1989/jenkins-pipeline-example/new/main/my-app'
+}
+stage('compile-Package'){
+  sh 'mvn package'
+}
