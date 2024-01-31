@@ -8,7 +8,7 @@
 
 name: trigger jenkins job
 on:
-  push:
+  pull_request:
     branches: [ "main" ]
 jobs:
  
