@@ -10,4 +10,6 @@ public class Student {
     private String major;
 
     private String birthdate;
+
+    private String hometown;
 }
