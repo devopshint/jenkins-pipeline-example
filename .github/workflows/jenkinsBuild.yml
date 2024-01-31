@@ -1,0 +1,28 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: trigger jenkins job
+on:
+  pull_request:
+    branches: [ "main" ]
+    types: [closed]
+
+jobs:
+ 
+  build:
+    if: github.event.pull_request.merged == true
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: trigger single Job
+      uses: appleboy/jenkins-action@master
+      with:
+        url: ${{ secrets.JENKINS_SERVER }}
+        user: "camlump"
+        token: ${{ secrets.JENKINS_PAT }}
+        job: "demo-pipeline"
